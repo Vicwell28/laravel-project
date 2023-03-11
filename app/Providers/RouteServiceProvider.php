@@ -19,6 +19,15 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/dashboard';
 
+     /**
+     * The path to the "verify_codecode" route for your application.
+     *
+     * Typically, users are redirected here after authentication.
+     *
+     * @var string
+     */
+    public const VERIFY_CODE = '/send/token';
+
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
      */
