@@ -59,7 +59,11 @@ class ValidateCodesAccessController extends Controller
 
         $user_token = $user->validateCodesAccess->first();
 
-        if ($user_token->access_code_type_id != 1) {
+        if ($user_token){
+            if ($user_token->access_code_type_id != 1) {
+                return view("mailview", ['user_id' => $user->id]);
+            }
+        } else {
             return view("mailview", ['user_id' => $user->id]);
         }
 
