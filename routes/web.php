@@ -23,11 +23,9 @@ Route::get('/token/{user}', [ValidateCodesAccessController::class, 'show'])->nam
 Route::post('/validar-token', [ValidateCodesAccessController::class, 'store_validate'])->name('validar.token');
 Route::get('/send/token', [ValidateCodesAccessController::class, 'store'])->name('send.token');
 
-
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');
