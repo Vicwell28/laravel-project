@@ -16,6 +16,7 @@ class ValidateCodesAccessController extends Controller
 {
     public function store(Request $request)
     {
+        //1
         $user = Auth::user();
 
         $myUrl = URL::temporarySignedRoute('token', now()->addMinutes(1), ['user' => $user->id]);
@@ -38,6 +39,7 @@ class ValidateCodesAccessController extends Controller
 
     public function store_validate(Request $request)
     {
+        //4
         $user = User::find(intval($request->input('user_id')));
 
         $token = [
@@ -79,6 +81,7 @@ class ValidateCodesAccessController extends Controller
 
     public function show($user) {
 
+        //2
         $user = User::find(intval($user));
 
         if (!$user) {
@@ -112,8 +115,11 @@ class ValidateCodesAccessController extends Controller
 
     public function store_validate_movil(Request $request)
     {
+        //3
         $requestCode = $request->code;
+
         $allCodes = ValidateCodesAccess::all();
+
 
         foreach ($allCodes as $code) {
 
@@ -146,10 +152,7 @@ class ValidateCodesAccessController extends Controller
 
                 return $numero_aleatorio_str;
             }
-
-            return "codigo mal";
         }
-
-        return $request->code;
+        return "codigo mal";
     }
 }
