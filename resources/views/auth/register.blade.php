@@ -1,4 +1,6 @@
 <x-guest-layout>
+    <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white" style="text-align: center;">Servidor Web Uno</h2>
+
     <form method="POST" action="{{ route('register') }}">
         @csrf
 

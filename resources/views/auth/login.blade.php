@@ -1,5 +1,9 @@
+
 <x-guest-layout>
+    <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white" style="text-align: center;">Servidor Web Uno</h2>
+
     <!-- Session Status -->
+
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <form method="POST" action="{{ route('login') }}">

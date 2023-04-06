@@ -1,4 +1,6 @@
 <x-app-layout>
+    <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white" style="text-align: center;">Servidor Web Uno</h2>
+
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Profile') }}
